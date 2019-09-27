@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "moduleResolution": "node",
+      "jsx": "react",
+      "strict": true,
+      "module": "es2015",
+      "noImplicitAny": false,
+      "outDir": "build/",
+      "preserveConstEnums": true,
+      "experimentalDecorators": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "lib": [ "es6", "dom" ],
+      "types": [ "webpack-env" ],
+      "target": "es5",
+      "allowJs": true,
+      "allowSyntheticDefaultImports":true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
