@@ -1,24 +1,31 @@
 import * as React from "react";
-import { Route ,BrowserRouter as Router  } from "react-router-dom";
-import  NavbarMenu  from './NavbarMenu'
-import { Dashboard } from "./Dashboard";
-import { FoodCategory } from "./FoodCategory";
+// import { Route, BrowserRouter as Router } from "react-router-dom";
+import NavbarMenu from './NavbarMenu'
+import { ConnectedRouter } from 'connected-react-router'
+// import { ConnectedRouter } from 'react-router-redux';
+import {routes} from '../routes'
+const App = ({ history }) => {
+    debugger;
+    return (
+      <ConnectedRouter history={history}>
+        { routes }
+      </ConnectedRouter>
+    )
+  }
 
-export default class App extends React.Component<{}, {}>{
+export default App
+// export default class App extends React.Component<{}, {}>{
 
-    render() {
-        return (
-            <div>
-                <Router>
-                    <NavbarMenu />
+//     render() {
+//         return (
+//             <div>
+//                 <NavbarMenu />
 
-                    <div className="main-content">
-                        <Route exact path="/" component={Dashboard}></Route>
-                        <Route exact path="/food-category" component={FoodCategory}></Route>
-                    </div>
-                </Router>
-            </div >
+//                 <div className="main-content">
+//                     {this.props.children}
+//                 </div>
+//             </div >
 
-        );
-    }
-}
+//         );
+//     }
+// }
